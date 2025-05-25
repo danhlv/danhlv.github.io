@@ -26,7 +26,7 @@ A simple RAG system that answers questions based on a local set of documents usi
 - FAISS for retrieval
 - OpenAI GPT-4 for generation
 
-# RAG Features:
+##### RAG Features:
 - Dynamic context-aware Q&A
 - Easy document indexing
 - Modular pipeline with LangChain
