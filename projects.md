@@ -19,7 +19,7 @@ Here are some of my recent and ongoing projects:
 - Built a data ingestion pipeline with Kafka Connect and Neo4j.
 - Used in large-scale graph analysis of NYC taxi data.
 
-### My First RAG (Retrieval-Augmented Generation)
+### My RAG (Retrieval-Augmented Generation)
 
 A simple RAG system that answers questions based on a local set of documents using:
 - SentenceTransformers for embeddings
