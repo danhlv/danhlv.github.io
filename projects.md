@@ -34,3 +34,15 @@ A simple RAG system that answers questions based on a local set of documents usi
 
 
 *More coming soon...*
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M9GDRMZKXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-M9GDRMZKXX');
+</script>
