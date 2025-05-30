@@ -17,7 +17,7 @@ Here are some of my recent and ongoing projects:
 - Integrated flow control strategies to improve performance.
 - Ongoing: publication in review.
 
-### 🛩️ Self-Morphing (for optimization) Wind Turbine Shrouds
+### 🛩️ Design optimization for Wind Turbine Shrouds
 - Integrated neural networks with CFD simulations for adaptive geometry control.
 - Enabled performance optimization through simulation-informed machine learning.
 
