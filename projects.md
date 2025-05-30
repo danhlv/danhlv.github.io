@@ -4,9 +4,9 @@ title: Projects
 permalink: /projects/
 ---
 
-    <div class="image-wrapper left-image">
-        <img src="{{ '/static/img/dan_left.png' | relative_url }}" alt="The flow field around an omni-directional wind turbine">
-    </div>
+<div class="image-wrapper left-image">
+  <img src="https://danhlv.github.io/static/img/dan_left.png" alt="The flow field around an omni-directional wind turbine">
+</div>
 
 Here are some of my recent and ongoing projects:
 
