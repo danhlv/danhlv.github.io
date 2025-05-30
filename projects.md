@@ -12,18 +12,16 @@ permalink: /projects/
 
 Here are some of my recent and ongoing projects:
 
-### 🌀 Shrouded Vertical-Axis Wind Turbine
-- Developed optimization pipeline combining CFD + ML.
-- Integrated flow control strategies to improve performance.
-- Ongoing: publication in review.
-
 ### 🛩️ Design optimization for Wind Turbine Shrouds
 - Integrated neural networks with CFD simulations for adaptive geometry control.
 - Enabled performance optimization through simulation-informed machine learning.
 
 ### 🧠 AI-Based Pitch Control System
-- Used neural networks to emulate ECU logic.
-- Deployed system on turbine simulator for validation.
+- Used neural networks to adapt the pitch of the blades to incoming wind conditions.
+- Maintaining optimal rotational speed
+
+### 🌀 Engine control Unit
+- Developed AI algorithm that governs the functioning of a generator engine.
 
 ### 🔗 Neo4j + Kafka Kubernetes Pipeline
 - Built a data ingestion pipeline with Kafka Connect and Neo4j.
