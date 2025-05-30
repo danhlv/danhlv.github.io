@@ -17,6 +17,10 @@ Here are some of my recent and ongoing projects:
 - Integrated flow control strategies to improve performance.
 - Ongoing: publication in review.
 
+### 🛩️ Self-Morphing (for optimization) Wind Turbine Shrouds
+- Integrated neural networks with CFD simulations for adaptive geometry control.
+- Enabled performance optimization through simulation-informed machine learning.
+
 ### 🧠 AI-Based Pitch Control System
 - Used neural networks to emulate ECU logic.
 - Deployed system on turbine simulator for validation.
@@ -25,17 +29,13 @@ Here are some of my recent and ongoing projects:
 - Built a data ingestion pipeline with Kafka Connect and Neo4j.
 - Used in large-scale graph analysis of NYC taxi data.
 
-### My RAG (Retrieval-Augmented Generation)
+### 🧬 My RAG (Retrieval-Augmented Generation)
 
 A simple RAG system that answers questions based on a local set of documents using:
 - SentenceTransformers for embeddings
 - FAISS for retrieval
 - OpenAI GPT-4 for generation
 
-##### RAG Features:
-- Dynamic context-aware Q&A
-- Easy document indexing
-- Modular pipeline with LangChain
 
 
 
