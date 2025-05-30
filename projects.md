@@ -5,8 +5,9 @@ permalink: /projects/
 ---
 
 <div class="image-wrapper left-image">
-  <img src="https://danhlv.github.io/static/img/dan_left.png" alt="The flow field around an omni-directional wind turbine">
+  <img src="https://danhlv.github.io/static/img/dan_left.png" alt="The flow field around an omni-directional wind turbine" style="width: 65%;">
 </div>
+
 
 Here are some of my recent and ongoing projects:
 
