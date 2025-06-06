@@ -4,7 +4,6 @@ title: Publications
 ---
 
 You can also browse my <a href="https://scholar.google.com/citations?user=BOSjPlQAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar profile</a>.
-.
 <br />
 
 
