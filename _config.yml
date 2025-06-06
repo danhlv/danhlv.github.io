@@ -14,10 +14,13 @@ baseurl: ""
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: Dan Hlevca
+title: Dan Hlevca – Fluid Dynamics & Data Science Engineer
 
 # Short description of your site
-description: Personal Website
+description: Personal Website  of Dan Hlevca, an engineer specializing in aerodynamic optimization, flow control, and machine learning.
+
+# For SEO
+url: "https://danhlv.github.io"
 
 # --- Navigation bar options --- #
 
