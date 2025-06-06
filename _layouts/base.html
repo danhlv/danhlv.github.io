@@ -17,26 +17,7 @@ common-js:
 <!DOCTYPE html>
 <html lang="en">
   <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 -->
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="Portfolio of Dan Hlevca, an engineer specializing in aerodynamic optimization, flow control, and machine learning.">
-    <meta name="keywords" content="Dan Hlevca, aerodynamic optimization, fluid dynamics, data science, CFD, flow control, machine learning">
-    <meta name="author" content="Dan Hlevca">
-    <meta name="robots" content="index, follow">
-    <title>{{ page.title }} | {{ site.title }}</title>
-
-    {% for css in page.common-css %}
-      <link rel="stylesheet" href="{{ css | relative_url }}">
-    {% endfor %}
-
-    {% for ext_css in page.common-ext-css %}
-      <link rel="stylesheet" href="{{ ext_css }}">
-    {% endfor %}
-
-    {% if page.common-googlefonts %}
-      <link href="https://fonts.googleapis.com/css?family={{ page.common-googlefonts | join:'|' }}" rel="stylesheet">
-    {% endif %}
-  </head>
+  {% include head.html %}
 
   <body>
 
@@ -48,10 +29,7 @@ common-js:
 
     {% include footer.html %}
   
-    {% for js in page.common-js %}
-      <script src="{{ js | relative_url }}"></script>
-    {% endfor %}
-
     {% include footer-scripts.html %}
-  </body>
 </html>
+
+
