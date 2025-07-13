@@ -1,35 +1,30 @@
----
-common-css:
-  - "/css/bootstrap.min.css"
-  - "/css/bootstrap-social.css"
-  - "/css/main.css"
-common-ext-css:
-  - "//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css"
-common-googlefonts:
-  - "Lora:400,700,400italic,700italic"
-  - "Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
-common-js:
-  - "/js/jquery-1.11.2.min.js"
-  - "/js/bootstrap.min.js"
-  - "/js/main.js"
----
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!DOCTYPE html>
-<html lang="en">
-  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 -->
-  {% include head.html %}
+  <title>{{ page.title | default: site.title }}</title>
 
-  <body>
+  <!-- Basic SEO meta tags -->
+  <meta name="description" content="Portfolio of Dan Hlevca, an aerodynamics engineer specializing in flow control, CFD, wind turbine optimization, and machine learning.">
+  <meta name="keywords" content="Dan Hlevca, aerodynamics, CFD, flow control, wind turbines, vertical axis turbine, shrouded turbine, data science, machine learning, engineering portfolio">
+  <meta name="author" content="Dan Hlevca">
 
-    {% include gtm_body.html %}
-  
-    {% include nav.html %}
+  <!-- Google Fonts -->
+  {% for font in page.common-googlefonts | default: site.common-googlefonts %}
+    <link href="https://fonts.googleapis.com/css?family={{ font }}" rel="stylesheet" type="text/css">
+  {% endfor %}
 
-    {{ content }}
+  <!-- External CSS -->
+  {% for css in page.common-ext-css | default: site.common-ext-css %}
+    <link rel="stylesheet" href="{{ css }}">
+  {% endfor %}
 
-    {% include footer.html %}
-  
-    {% include footer-scripts.html %}
-</html>
+  <!-- Internal CSS -->
+  {% for css in page.common-css | default: site.common-css %}
+    <link rel="stylesheet" href="{{ css | relative_url }}">
+  {% endfor %}
 
-
+  <!-- Favicon (optional) -->
+  <!-- <link rel="icon" href="/assets/favicon.ico"> -->
+</head>
