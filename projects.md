@@ -12,6 +12,13 @@ permalink: /projects/
 
 Here are some of my recent and ongoing projects:
 
+###  [Naïve Bayes classifier](https://danhlv.github.io/naivebayes/)
+
+A Naïve Bayes classification approach based on Maximum Likelihood Estimation (MLE) of class-conditional densities
+- MLE to fit probabilistic models
+- Bayes' rule
+- multivariate normal distribution
+
 ###  Design optimization for Wind Turbine Shrouds
 - Integrated neural networks with CFD simulations for adaptive geometry control.
 - Enabled performance optimization through simulation-informed machine learning.
@@ -34,12 +41,7 @@ A RAG system that answers questions based on a local set of documents using:
 - FAISS for retrieval
 - OpenAI GPT-4 for generation
 
-###  [Naïve Bayes classifier](https://danhlv.github.io/naivebayes/)
 
-A Naïve Bayes classification approach based on Maximum Likelihood Estimation (MLE) of class-conditional densities
-- MLE to fit probabilistic models
-- Bayes' rule
-- multivariate normal distribution
 
 
 
