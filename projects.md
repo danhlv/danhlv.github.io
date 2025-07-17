@@ -36,7 +36,7 @@ A RAG system that answers questions based on a local set of documents using:
 
 ###  Naïve Bayes classifier
 
-a Naïve Bayes classification approach based on Maximum Likelihood Estimation (MLE) of class-conditional densities
+A Naïve Bayes classification approach based on Maximum Likelihood Estimation (MLE) of class-conditional densities
 - MLE to fit probabilistic models
 - Bayes' rule
 - multivariate normal distribution
