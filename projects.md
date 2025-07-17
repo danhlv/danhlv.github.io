@@ -34,7 +34,7 @@ A RAG system that answers questions based on a local set of documents using:
 - FAISS for retrieval
 - OpenAI GPT-4 for generation
 
-###  Naïve Bayes classifier
+###  [Naïve Bayes classifier](https://danhlv.github.io/naivebayes/)
 
 A Naïve Bayes classification approach based on Maximum Likelihood Estimation (MLE) of class-conditional densities
 - MLE to fit probabilistic models
