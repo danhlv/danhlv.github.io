@@ -12,28 +12,34 @@ permalink: /projects/
 
 Here are some of my recent and ongoing projects:
 
-### 🛩️ Design optimization for Wind Turbine Shrouds
+###  Design optimization for Wind Turbine Shrouds
 - Integrated neural networks with CFD simulations for adaptive geometry control.
 - Enabled performance optimization through simulation-informed machine learning.
 
-### 🧠 AI-Based Pitch Control System
+###  AI-Based Pitch Control System
 - Used neural networks to adapt the pitch of the blades to incoming wind conditions.
 - Maintaining optimal rotational speed
 
-### 🌀 Engine control Unit
+###  Engine control Unit
 - Developed AI algorithm that governs the functioning of a generator engine.
 
-### 🔗 Neo4j + Kafka Kubernetes Pipeline
+###  Neo4j + Kafka Kubernetes Pipeline
 - Built a data ingestion pipeline with Kafka Connect and Neo4j.
 - Used in large-scale graph analysis of NYC taxi data.
 
-### 🧬 My RAG (Retrieval-Augmented Generation)
+###  My RAG (Retrieval-Augmented Generation)
 
-A simple RAG system that answers questions based on a local set of documents using:
+A RAG system that answers questions based on a local set of documents using:
 - SentenceTransformers for embeddings
 - FAISS for retrieval
 - OpenAI GPT-4 for generation
 
+###  Naïve Bayes classifier
+
+a Naïve Bayes classification approach based on Maximum Likelihood Estimation (MLE) of class-conditional densities
+- MLE to fit probabilistic models
+- Bayes' rule
+- multivariate normal distribution
 
 
 
