@@ -22,15 +22,7 @@ $$
 \mathbf{x}_{\text{train}} = (\mu, \sigma)
 $$
 
-- **Parameter Estimation**: To model the class distributions, the following parameters were estimated from the training data:
-
-For digit 0:
-- Mean vector $ \boldsymbol{\mu}_0 \in \mathbb{R}^2 $
-- Covariance matrix $ \Sigma_0 \in \mathbb{R}^{2 \times 2} $
-
-For digit 1:
-- Mean vector $ \boldsymbol{\mu}_1 \in \mathbb{R}^2 $
-- Covariance matrix $ \Sigma_1 \in \mathbb{R}^{2 \times 2} $
+- **Parameter Estimation**: To model the class distributions, the mean vector $ \boldsymbol{\mu}_i \in \mathbb{R}^2 $ and the covariance matrix $ \Sigma_i \in \mathbb{R}^{2 \times 2} $ were estimated from the training data.
 
 The formulas used for parameter estimation are:
 
