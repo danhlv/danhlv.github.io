@@ -52,12 +52,12 @@ $$
 This was implemented using the `scipy.stats.multivariate_normal` module in Python.
 
 <div class="image-wrapper left-image" style="text-align: center;">
-  <img src="https://danhlv.github.io/static/img/2D_gaussian_plot_for_naive_bayes_classifier_train_data.png" alt="Example digits" style="width: 70%; display: block; margin: 0 auto;">
+  <img src="https://danhlv.github.io/static/img/2D_gaussian_plot_for_naive_bayes_classifier_train_data.png" alt="the multivariate distribution for the training data" style="width: 80%; display: block; margin: 0 auto;">
 </div>
 
 ## Classification
 
-We want to predict the class label $ \hat{y} \in \{0, 1\} $ that has the highest posterior probability given the observed 2D feature vector \( x = (\mu, \sigma) \):
+We want to predict the class label $ \hat{y} \in \{0, 1\} $ that has the highest posterior probability given the observed 2D feature vector $ x = (\mu, \sigma) $:
 
 $$
 \hat{y} = \arg\max_y P(y \mid x)
