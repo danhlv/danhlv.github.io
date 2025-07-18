@@ -88,7 +88,6 @@ In our case:
 ## Final Results
 
 - **Classification Accuracy**:
-
 <div style="font-size: 20px; color: red; font-weight: bold;">
 96.88%
 </div>
