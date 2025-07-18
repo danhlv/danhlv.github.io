@@ -14,7 +14,7 @@ This project implements a Naïve Bayes classifier using MLE-based Gaussian model
 
 <figure style="text-align: center;">
   <img src="https://danhlv.github.io/static/img/example_digits_data.png"
-       alt="Example digits images"
+       alt="Fig.1 - Example digits images"
        style="width: 40%; display: block; margin: 0 auto;">
   <figcaption style="font-size: 14px; margin-top: 8px;">Example digit images from the dataset</figcaption>
 </figure>
@@ -46,9 +46,12 @@ $$
 
 This was implemented using the `scipy.stats.multivariate_normal` module in Python.
 
-<div class="image-wrapper left-image" style="text-align: center;">
-  <img src="https://danhlv.github.io/static/img/2D_gaussian_plot_for_naive_bayes_classifier_train_data.png" alt="the multivariate distribution for the training data" style="width: 80%; display: block; margin: 0 auto;">
-</div>
+<figure style="text-align: center;">
+  <img src="https://danhlv.github.io/static/img/2D_gaussian_plot_for_naive_bayes_classifier_train_data.png"
+       alt="Fig.2 - The multivariate Gaussian distribution for the training data"
+       style="width: 80%; display: block; margin: 0 auto;">
+  <figcaption style="font-size: 14px; margin-top: 8px;">Example digit images from the dataset</figcaption>
+</figure>
 
 ## Classification
 
