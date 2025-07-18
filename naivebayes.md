@@ -16,7 +16,7 @@ This project implements a Naïve Bayes classifier using MLE-based Gaussian model
   <img src="https://danhlv.github.io/static/img/example_digits_data.png"
        alt="Fig.1 - Example digits images"
        style="width: 40%; display: block; margin: 0 auto;">
-  <figcaption style="font-size: 14px; margin-top: 8px;">Example digit images from the dataset</figcaption>
+  <figcaption style="font-size: 14px; margin-top: 8px;">Fig.1 - Example digit images from the dataset</figcaption>
 </figure>
 
 - **Preprocessing**: Each image was reshaped and two statistical features — mean (μ) and standard deviation (σ) — were extracted. These two values form a 2-dimensional feature vector for each image:
@@ -50,7 +50,7 @@ This was implemented using the `scipy.stats.multivariate_normal` module in Pytho
   <img src="https://danhlv.github.io/static/img/2D_gaussian_plot_for_naive_bayes_classifier_train_data.png"
        alt="Fig.2 - The multivariate Gaussian distribution for the training data"
        style="width: 80%; display: block; margin: 0 auto;">
-  <figcaption style="font-size: 14px; margin-top: 8px;">Example digit images from the dataset</figcaption>
+  <figcaption style="font-size: 14px; margin-top: 8px;">Fig.2 - The multivariate Gaussian distribution for the training data represented in the feature space</figcaption>
 </figure>
 
 ## Classification
