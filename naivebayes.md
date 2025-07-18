@@ -87,10 +87,8 @@ In our case:
 
 ## Final Results
 
-- **Classification Accuracy**:
-<div style="font-size: 20px; color: red; font-weight: bold;">
-96.88%
-</div>
+- **Classification Accuracy**: <div style="font-size: 20px; color: red; font-weight: bold;">96.88%</div>
+
 
 This high accuracy indicates that the model performs extremely well on the test data. The Naïve Bayes classifier effectively captures class-discriminative information using only two simple features — the mean and standard deviation of pixel intensities.
 
