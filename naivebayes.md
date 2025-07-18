@@ -1,12 +1,12 @@
 ---
 layout: page
-title: "Naive Bayes Classifier"
+title: "Naïve Bayes classifier"
 permalink: /naivebayes/
 ---
 <!-- # Naive Bayes Classifier -->
 
 
-This project implements a Naïve Bayes classifier using MLE-based Gaussian modeling to distinguish between two classes of image data using features derived from the mean and standard deviation of pixel intensities. The data consists of `.mat` files containing training and test images for each class. The images are reshaped and preprocessed to extract meaningful features before applying the classifier.
+This project implements a Naïve Bayes classifier using MLE-based Gaussian modeling to distinguish between two classes of image data using features derived from the mean and standard deviation of pixel intensities. The data consists of a part of <a href="http://yann.lecun.com/exdb/mnist/" target="_blank" rel="noopener noreferrer">MNIST database</a>, in particular, just the images corresponding to digit 0 and digit 1. The images are reshaped and preprocessed to extract meaningful features before applying the classifier.
 
 ## Workflow Summary
 
