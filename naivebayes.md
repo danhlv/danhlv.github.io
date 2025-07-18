@@ -25,12 +25,12 @@ $$
 - **Parameter Estimation**: To model the class distributions, the following parameters were estimated from the training data:
 
 For digit 0:
-- Mean vector \( \boldsymbol{\mu}_0 \in \mathbb{R}^2 \)
-- Covariance matrix \( \Sigma_0 \in \mathbb{R}^{2 \times 2} \)
+- Mean vector $ \boldsymbol{\mu}_0 \in \mathbb{R}^2 $
+- Covariance matrix $ \Sigma_0 \in \mathbb{R}^{2 \times 2} $
 
 For digit 1:
-- Mean vector \( \boldsymbol{\mu}_1 \in \mathbb{R}^2 \)
-- Covariance matrix \( \Sigma_1 \in \mathbb{R}^{2 \times 2} \)
+- Mean vector $ \boldsymbol{\mu}_1 \in \mathbb{R}^2 $
+- Covariance matrix $ \Sigma_1 \in \mathbb{R}^{2 \times 2} $
 
 The formulas used for parameter estimation are:
 
@@ -39,7 +39,7 @@ $$
 \Sigma_y = \frac{1}{N_y - 1} \sum_{i=1}^{N_y} (\mathbf{x}_i - \boldsymbol{\mu}_y)(\mathbf{x}_i - \boldsymbol{\mu}_y)^T
 $$
 
-Where \( y \in \{0, 1\} \) and \( N_y \) is the number of training samples for class \( y \) (5923 for class 0 and 6742 for class 1).
+Where $ y \in \{0, 1\} $ and $ N_y $ is the number of training samples for class $ y $ (5923 for class 0 and 6742 for class 1).
 
 ## Training
 
@@ -52,7 +52,7 @@ $$
 This was implemented using the `scipy.stats.multivariate_normal` module in Python.
 
 <div class="image-wrapper left-image" style="text-align: center;">
-  <img src="https://danhlv.github.io/static/img/2D_gaussian_plot_for_naive_bayes_classifier_train_data.png" alt="Example digits" style="width: 60%; display: block; margin: 0 auto;">
+  <img src="https://danhlv.github.io/static/img/2D_gaussian_plot_for_naive_bayes_classifier_train_data.png" alt="Example digits" style="width: 70%; display: block; margin: 0 auto;">
 </div>
 
 ## Classification
@@ -76,7 +76,7 @@ P(0 \mid x) = \frac{P(x \mid 0) \cdot P(0)}{P(x)}, \quad
 P(1 \mid x) = \frac{P(x \mid 1) \cdot P(1)}{P(x)}
 $$
 
-Since \( P(x) \) is the same for both classes, it cancels out during comparison:
+Since $ P(x) $ is the same for both classes, it cancels out during comparison:
 
 $$
 \hat{y} =
@@ -89,9 +89,9 @@ $$
 This approach leverages both the **statistical shape of the data** (via the Gaussian) and the **relative frequency of classes** (via the priors) to make informed predictions.
 
 In our case:
-- \( P(y \mid x) \): posterior probability to be maximized
-- \( P(y) \): prior estimated from training class frequencies
-- \( P(x \mid y) \): likelihood modeled by the class-specific 2D Gaussian PDF
+- $ P(y \mid x) $: posterior probability to be maximized
+- $ P(y) $: prior estimated from training class frequencies
+- $ P(x \mid y) $: likelihood modeled by the class-specific 2D Gaussian PDF
 
 ## Final Results
 
