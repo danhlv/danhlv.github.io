@@ -22,7 +22,7 @@ $$
 \mathbf{x}_{\text{train}} = (\mu, \sigma)
 $$
 
-- **Parameter Estimation**: To model the class distributions, the mean vector ($ \boldsymbol{\mu}_i \in \mathbb{R}^2 $) and the covariance matrix ($ \Sigma_i \in \mathbb{R}^{2 \times 2} $) were estimated from the training data.
+- **Parameter Estimation**: To model the class distributions, the mean vector $ \boldsymbol{\mu}_i \in \mathbb{R}^2 $ and the covariance matrix $ \Sigma_i \in \mathbb{R}^{2 \times 2} $ were estimated from the training data.
 
 The formulas used for parameter estimation are:
 
