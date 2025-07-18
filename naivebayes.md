@@ -12,9 +12,12 @@ This project implements a Naïve Bayes classifier using MLE-based Gaussian model
 
 - **Data Loading**: Images were loaded from the MNIST database only for class 0 and class 1. They were split into training and testing sets.
 
-<div class="image-wrapper left-image" style="text-align: center;">
-  <img src="https://danhlv.github.io/static/img/example_digits_data.png" alt="Example digits" style="width: 40%; display: block; margin: 0 auto;">
-</div>
+<figure style="text-align: center;">
+  <img src="https://danhlv.github.io/static/img/example_digits_data.png"
+       alt="Example digits images"
+       style="width: 40%; display: block; margin: 0 auto;">
+  <figcaption style="font-size: 14px; margin-top: 8px;">Example digit images from the dataset</figcaption>
+</figure>
 
 - **Preprocessing**: Each image was reshaped and two statistical features — mean (μ) and standard deviation (σ) — were extracted. These two values form a 2-dimensional feature vector for each image:
 
