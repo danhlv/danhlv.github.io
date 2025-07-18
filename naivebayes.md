@@ -57,7 +57,7 @@ This was implemented using the `scipy.stats.multivariate_normal` module in Pytho
 
 ## Classification
 
-We want to predict the class label $\hat{y} \in \{0, 1\}$ that has the highest posterior probability given the observed 2D feature vector \( x = (\mu, \sigma) \):
+We want to predict the class label $ \hat{y} \in \{0, 1\} $ that has the highest posterior probability given the observed 2D feature vector \( x = (\mu, \sigma) \):
 
 $$
 \hat{y} = \arg\max_y P(y \mid x)
