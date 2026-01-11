@@ -6,7 +6,7 @@ permalink: /AIgeneratedairfoils/
 
 This project develops a computational pipeline for the generation of novel NACA airfoil geometries using artificial intelligence. The pipeline is designed to synthesize new airfoil shapes that meet prescribed aerodynamic performance targets, including force coefficients and pressure distributions, for specified angles of attack and Reynolds numbers. By coupling geometry generation with aerodynamic performance constraints, the framework enables the systematic design of airfoils tailored to user-defined operating conditions.
 
-## Workflow Summary
+### Workflow Summary
 
 #### 1️⃣ Data Loading
 
