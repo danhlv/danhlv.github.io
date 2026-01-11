@@ -139,7 +139,7 @@ These CST coefficients represent a new, AI-generated airfoil shape.
 <figure style="text-align: center;">
   <img src="https://danhlv.github.io/static/img/PCA_latent_space.png"
        alt="Fig.1 - The autoencoder used"
-       style="width: 100%; display: block; margin: 0 auto;">
+       style="width: 60%; display: block; margin: 0 auto;">
   <figcaption style="font-size: 14px; margin-top: 8px;">Fig.3 - The location of the new aerodynamic properties point onto the PCA of the latent space</figcaption>
 </figure>
 
@@ -152,6 +152,6 @@ Use the CST reconstruction formula to map the coefficients back to smooth $(x,y)
 <figure style="text-align: center;">
   <img src="https://danhlv.github.io/static/img/NACA_pred9.png"
        alt="Fig.1 - The autoencoder used"
-       style="width: 100%; display: block; margin: 0 auto;">
+       style="width: 80%; display: block; margin: 0 auto;">
   <figcaption style="font-size: 14px; margin-top: 8px;">Fig.4 - AI-Generated (red) vs baseline airfoil (blue)</figcaption>
 </figure>
