@@ -57,6 +57,31 @@ $$
 
 This builds a **latent manifold of valid airfoil shapes**.
 
+<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
+  <tr>
+    <td style="padding:8px;">
+      <img src="https://danhlv.github.io/static/img/cst_coeffs_sample_0.png"
+           alt="CST coefficient sample 0" style="width:100%;">
+    </td>
+    <td style="padding:8px;">
+      <img src="https://danhlv.github.io/static/img/cst_coeffs_sample_1.png"
+           alt="CST coefficient sample 1" style="width:100%;">
+    </td>
+  </tr>
+  <tr>
+    <td style="padding:8px;">
+      <img src="https://danhlv.github.io/static/img/cst_coeffs_sample_2.png"
+           alt="CST coefficient sample 2" style="width:100%;">
+    </td>
+    <td style="padding:8px;">
+      <img src="https://danhlv.github.io/static/img/cst_coeffs_sample_3.png"
+           alt="CST coefficient sample 3" style="width:100%;">
+    </td>
+  </tr>
+</table>
+
+
+
 ---
 
 #### 3️⃣ Build and Train the Inverse Network
