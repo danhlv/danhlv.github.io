@@ -1,111 +1,100 @@
 ---
 layout: page
-title: "Naïve Bayes classifier"
-permalink: /naivebayes/
+title: "Generative AI–driven development of airfoil geometries optimized for aerodynamic performance."
+permalink: /AIgeneratedairfoils/
 ---
-<!-- # Naive Bayes Classifier -->
 
-
-This project implements a Naïve Bayes classifier using MLE-based Gaussian modeling to distinguish between two classes of image data using features derived from the mean and standard deviation of pixel intensities. The data consists of a part of <a href="http://yann.lecun.com/exdb/mnist/" target="_blank" rel="noopener noreferrer">MNIST dataset</a>, in particular, just the images corresponding to digit 0 and digit 1. The images are reshaped and preprocessed to extract meaningful features before applying the classifier.
+This project develops a computational pipeline for the generation of novel NACA airfoil geometries using artificial intelligence. The pipeline is designed to synthesize new airfoil shapes that meet prescribed aerodynamic performance targets, including force coefficients and pressure distributions, for specified angles of attack and Reynolds numbers. By coupling geometry generation with aerodynamic performance constraints, the framework enables the systematic design of airfoils tailored to user-defined operating conditions.
 
 ## Workflow Summary
 
-- **Data Loading**: Images were loaded from the <a href="http://yann.lecun.com/exdb/mnist/" target="_blank" rel="noopener noreferrer">MNIST dataset</a> only for class 0 and class 1. They were split into training and testing sets.
+### 1️⃣ Data Loading
 
-<figure style="text-align: center;">
-  <img src="https://danhlv.github.io/static/img/example_digits_data.png"
-       alt="Fig.1 - Example digits images"
-       style="width: 40%; display: block; margin: 0 auto;">
-  <figcaption style="font-size: 14px; margin-top: 8px;">Fig.1 - Example digit images from the dataset</figcaption>
-</figure>
+For this project, we use the **AirfRANS** dataset, available here:  
+<a href="https://airfrans.readthedocs.io/en/latest/" target="_blank" rel="noopener noreferrer">https://airfrans.readthedocs.io</a>
 
-- **Preprocessing**: Each image was reshaped and two statistical features — mean (μ) and standard deviation (σ) — were extracted. These two values form a 2-dimensional feature vector for each image:
+The dataset is extracted from CFD simulations in two steps:
 
+- **Step 1:** Extract the NACA airfoil contours (pairs of points $(x, y)$) together with the corresponding pressure distribution.  
+- **Step 2:** Extract the aerodynamic performance quantities — lift, drag, moment coefficients, forces, angle of attack, and Reynolds number.
+
+---
+
+## 2️⃣ Build and Train the Autoencoder (Using CST Coefficients)
+
+Instead of raw $(x,y)$ coordinates, each airfoil is represented using **CST (Class–Shape Transformation) coefficients**:
+
+- Upper surface: $N_{\text{CST}} + 1 = 9$ coefficients  
+- Lower surface: $9$ coefficients  
+
+**Total input dimension:**
 $$
-\mathbf{x}_{\text{train}} = (\mu, \sigma)
-$$
-
-- **Parameter Estimation**: To model the class distributions, the mean vector $ \boldsymbol{\mu}_i \in \mathbb{R}^2 $ and the covariance matrix $ \Sigma_i \in \mathbb{R}^{2 \times 2} $ were estimated from the training data.
-
-The formulas used for parameter estimation are:
-
-$$
-\boldsymbol{\mu}_y = \frac{1}{N_y} \sum_{i=1}^{N_y} \mathbf{x}_i,\quad
-\Sigma_y = \frac{1}{N_y - 1} \sum_{i=1}^{N_y} (\mathbf{x}_i - \boldsymbol{\mu}_y)(\mathbf{x}_i - \boldsymbol{\mu}_y)^T
-$$
-
-Where $ y \in \{0, 1\} $ and $ N_y $ is the number of training samples for class $ y $ (5923 for class 0 and 6742 for class 1).
-
-## Training
-
-- For each class, the joint distribution of features was modeled using a multivariate Gaussian with the general form:
-
-$$
-P(x \mid y) = \frac{1}{(2\pi)^{d/2} \, |\Sigma_y|^{1/2}} \exp\left( -\frac{1}{2}(x - \mu_y)^T \Sigma_y^{-1} (x - \mu_y) \right)
+18\ \text{CST coefficients per airfoil}
 $$
 
-This was implemented using the `scipy.stats.multivariate_normal` module in Python.
+By using CST coefficients and a compressed latent space, the inverse network learns how to generate **realistic airfoils** that match target aerodynamic properties, while the decoder ensures the output stays on the manifold of **valid and smooth** airfoil geometries.
 
-<figure style="text-align: center;">
-  <img src="https://danhlv.github.io/static/img/2D_gaussian_plot_for_naive_bayes_classifier_train_data.png"
-       alt="Fig.2 - The multivariate Gaussian distribution for the training data"
-       style="width: 80%; display: block; margin: 0 auto;">
-  <figcaption style="font-size: 14px; margin-top: 8px;">Fig.2 - The multivariate Gaussian distribution for the training data represented in the feature space</figcaption>
-</figure>
+These 18 parameters go into the autoencoder.
 
-## Classification
-
-We want to predict the class label $ \hat{y} \in \{0, 1\} $ that has the highest posterior probability given the observed 2D feature vector $ x = (\mu, \sigma) $:
-
+**Encoder:**  
+Compresses the CST coefficients into a low-dimensional latent vector $z$:
 $$
-\hat{y} = \arg\max_y P(y \mid x)
+z = f_{\text{enc}}(\text{CST}_{18})
 $$
 
-Using Bayes’ Theorem:
-
+**Decoder:**  
+Reconstructs the CST coefficients from the latent code:
 $$
-P(y \mid x) = \frac{P(x \mid y) \cdot P(y)}{P(x)}
-$$
-
-In the binary case:
-
-$$
-P(0 \mid x) = \frac{P(x \mid 0) \cdot P(0)}{P(x)}, \quad
-P(1 \mid x) = \frac{P(x \mid 1) \cdot P(1)}{P(x)}
+\widehat{\text{CST}} = f_{\text{dec}}(z)
 $$
 
-Since $ P(x) $ is the same for both classes, it cancels out during comparison:
+This builds a **latent manifold of valid airfoil shapes**.
+
+---
+
+## 3️⃣ Build and Train the Inverse Network
+
+Once the autoencoder is fully trained and **frozen**, a second network is trained:
 
 $$
-\hat{y} =
-\begin{cases}
-0 & \text{if } P(x \mid 0) \cdot P(0) > P(x \mid 1) \cdot P(1) \\
-1 & \text{otherwise}
-\end{cases}
+\left[\, F_{\text{tot}X},\ F_{\text{tot}Y},\ C_D,\ C_L,\ C_M,\ Re,\ AoA,\ p_{\text{distribution}}\,\right]
+\;\xrightarrow{\,f_{\text{inv}}\,}\;
+z
 $$
 
-This approach leverages both the **statistical shape of the data** (via the Gaussian) and the **relative frequency of classes** (via the priors) to make informed predictions.
+This inverse model learns how aerodynamic targets map to appropriate latent codes.
 
-In our case:
-- $ P(y \mid x) $: posterior probability to be maximized
-- $ P(y) $: prior estimated from training class frequencies
-- $ P(x \mid y) $: likelihood modeled by the class-specific 2D Gaussian PDF
+---
 
-## Final Results
+## 4️⃣ Create a New Aerodynamic Target Vector
 
-- **Classification Accuracy**: <span style="font-size: 20px; color: red; font-weight: bold;">96.88%</span>
+You choose a desired performance vector, for example:
+$$
+\left[\, F_{\text{tot}X}^{\ast},\ F_{\text{tot}Y}^{\ast},\ C_D^{\ast},\ C_L^{\ast},\ C_M^{\ast},\ Re,\ AoA,\ p_{\text{distribution}}^{\ast}\,\right]
+$$
 
+---
 
-This high accuracy indicates that the model performs extremely well on the test data. The Naïve Bayes classifier effectively captures class-discriminative information using only two simple features — the mean and standard deviation of pixel intensities.
+## 5️⃣ Pass the Target Through the Inverse Network
 
+The inverse model outputs a latent vector:
+$$
+z^{\ast} = f_{\text{inv}}(\left[\, F_{\text{tot}X}^{\ast},\ F_{\text{tot}Y}^{\ast},\ C_D^{\ast},\ C_L^{\ast},\ C_M^{\ast},\ Re,\ AoA,\ p_{\text{distribution}}^{\ast}\,\right])
+$$
 
+---
 
+## 6️⃣ Decode the Latent Code into CST Coefficients
 
+Using the decoder:
+$$
+\widehat{\text{CST}}^{\ast} = f_{\text{dec}}(z^{\ast})
+$$
 
+These CST coefficients represent a new, AI-generated airfoil shape.
 
+---
 
+## 7️⃣ Reconstruct and Plot the New Airfoil
 
-
-
-
-<!-- Add more sections as needed -->
+Use the CST reconstruction formula to map the coefficients back to smooth $(x,y)$ coordinates, plot the geometry, and analyze the resulting shape.
