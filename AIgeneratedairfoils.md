@@ -8,7 +8,7 @@ This project develops a computational pipeline for the generation of novel NACA 
 
 ## Workflow Summary
 
-### 1️⃣ Data Loading
+#### 1️⃣ Data Loading
 
 For this project, we use the **AirfRANS** dataset, available here:  
 <a href="https://airfrans.readthedocs.io/en/latest/" target="_blank" rel="noopener noreferrer">https://airfrans.readthedocs.io</a>
@@ -20,7 +20,7 @@ The dataset is extracted from CFD simulations in two steps:
 
 ---
 
-## 2️⃣ Build and Train the Autoencoder (Using CST Coefficients)
+#### 2️⃣ Build and Train the Autoencoder (Using CST Coefficients)
 
 Instead of raw $(x,y)$ coordinates, each airfoil is represented using **CST (Class–Shape Transformation) coefficients**:
 
@@ -59,7 +59,7 @@ This builds a **latent manifold of valid airfoil shapes**.
 
 ---
 
-## 3️⃣ Build and Train the Inverse Network
+#### 3️⃣ Build and Train the Inverse Network
 
 Once the autoencoder is fully trained and **frozen**, a second network is trained:
 
@@ -73,7 +73,7 @@ This inverse model learns how aerodynamic targets map to appropriate latent code
 
 ---
 
-## 4️⃣ Create a New Aerodynamic Target Vector
+#### 4️⃣ Create a New Aerodynamic Target Vector
 
 You choose a desired performance vector, for example:
 $$
@@ -82,7 +82,7 @@ $$
 
 ---
 
-## 5️⃣ Pass the Target Through the Inverse Network
+#### 5️⃣ Pass the Target Through the Inverse Network
 
 The inverse model outputs a latent vector:
 $$
@@ -91,7 +91,7 @@ $$
 
 ---
 
-## 6️⃣ Decode the Latent Code into CST Coefficients
+#### 6️⃣ Decode the Latent Code into CST Coefficients
 
 Using the decoder:
 $$
@@ -102,6 +102,6 @@ These CST coefficients represent a new, AI-generated airfoil shape.
 
 ---
 
-## 7️⃣ Reconstruct and Plot the New Airfoil
+#### 7️⃣ Reconstruct and Plot the New Airfoil
 
 Use the CST reconstruction formula to map the coefficients back to smooth $(x,y)$ coordinates, plot the geometry, and analyze the resulting shape.
