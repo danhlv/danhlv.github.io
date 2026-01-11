@@ -12,6 +12,13 @@ permalink: /projects/
 
 Here are some of my recent and ongoing projects:
 
+###  [Generative AI usage yielding desired aerodynamic performance airfoil geometries ](https://danhlv.github.io/AIgeneratedairfoils/)
+
+We want to create a pipeline that will generate new NACA airfoils geometries. These newly AI-generated geometries that will have the aerodynamic performance of our choice in terms of forces and pressure distribution for given angles of attack and Reynolds numbers.
+- We want to train an autoencoder on airfoil geometries to capture the distribution of shapes in a latent space.
+-  Then we want to train an inverse neural network that will map the aerodynamic performance of the NACA airfoils onto their respective latent geometries.
+- We then generate our ideal set of performance parameters and pass them through the inverse NN which will yield a new latent space geometry that will be translated back to original euclidian geometry space by the decoder of the autoencoder. Ideally this NACA computer-generated airfoil will have the performance that we thought about initially.
+
 ###  [Naïve Bayes classifier](https://danhlv.github.io/naivebayes/)
 
 A Naïve Bayes classification approach based on Maximum Likelihood Estimation (MLE) of class-conditional densities
