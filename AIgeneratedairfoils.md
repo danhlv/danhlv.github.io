@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Generative AI–driven development of airfoil geometries optimized for aerodynamic performance."
+title: "AeroML: Generative AI–driven development of airfoil geometries optimized for aerodynamic performance."
 permalink: /AIgeneratedairfoils/
 ---
 
