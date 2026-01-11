@@ -27,6 +27,13 @@ Instead of raw $(x,y)$ coordinates, each airfoil is represented using **CST (Cla
 - Upper surface: $N_{\text{CST}} + 1 = 9$ coefficients  
 - Lower surface: $9$ coefficients  
 
+<figure style="text-align: center;">
+  <img src="https://danhlv.github.io/static/img/autoencoder_template.png"
+       alt="Fig.1 - Example digits images"
+       style="width: 40%; display: block; margin: 0 auto;">
+  <figcaption style="font-size: 14px; margin-top: 8px;">Fig.1 - The autoencoder used</figcaption>
+</figure>
+
 **Total input dimension:**
 $$
 18\ \text{CST coefficients per airfoil}
