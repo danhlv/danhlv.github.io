@@ -57,28 +57,39 @@ $$
 
 This builds a **latent manifold of valid airfoil shapes**.
 
-<table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
-  <tr>
-    <td style="padding:8px;">
-      <img src="https://danhlv.github.io/static/img/cst_coeffs_sample_0.png"
-           alt="CST coefficient sample 0" style="width:100%;">
-    </td>
-    <td style="padding:8px;">
-      <img src="https://danhlv.github.io/static/img/cst_coeffs_sample_1.png"
-           alt="CST coefficient sample 1" style="width:100%;">
-    </td>
-  </tr>
-  <tr>
-    <td style="padding:8px;">
-      <img src="https://danhlv.github.io/static/img/cst_coeffs_sample_2.png"
-           alt="CST coefficient sample 2" style="width:100%;">
-    </td>
-    <td style="padding:8px;">
-      <img src="https://danhlv.github.io/static/img/cst_coeffs_sample_3.png"
-           alt="CST coefficient sample 3" style="width:100%;">
-    </td>
-  </tr>
-</table>
+<figure style="margin: 1.5rem 0; text-align: center;">
+  <table style="width:100%; border-collapse:collapse; margin:0 auto;">
+    <tr>
+      <td style="padding:8px;">
+        <img src="https://danhlv.github.io/static/img/cst_coeffs_sample_0.png"
+             alt="Sample airfoil 0: original CST vs autoencoder reconstruction"
+             style="width:100%;">
+      </td>
+      <td style="padding:8px;">
+        <img src="https://danhlv.github.io/static/img/cst_coeffs_sample_1.png"
+             alt="Sample airfoil 1: original CST vs autoencoder reconstruction"
+             style="width:100%;">
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:8px;">
+        <img src="https://danhlv.github.io/static/img/cst_coeffs_sample_2.png"
+             alt="Sample airfoil 2: original CST vs autoencoder reconstruction"
+             style="width:100%;">
+      </td>
+      <td style="padding:8px;">
+        <img src="https://danhlv.github.io/static/img/cst_coeffs_sample_3.png"
+             alt="Sample airfoil 3: original CST vs autoencoder reconstruction"
+             style="width:100%;">
+      </td>
+    </tr>
+  </table>
+
+  <figcaption style="font-size: 14px; margin-top: 8px; color: #555;">
+    Fig. 2 – 4 sample airfoils: original CST coefficients vs autoencoder-reconstructed CST coefficients.
+  </figcaption>
+</figure>
+
 
 
 
