@@ -12,7 +12,7 @@ permalink: /projects/
 
 Here are some of my recent and ongoing projects:
 
-###  [Generative AI usage yielding desired aerodynamic performance airfoil geometries ](https://danhlv.github.io/AIgeneratedairfoils/)
+###  [Generative AI–driven development of airfoil geometries optimized for aerodynamic performance. ](https://danhlv.github.io/AIgeneratedairfoils/)
 
 We want to create a pipeline that will generate new NACA airfoils geometries. These newly AI-generated geometries that will have the aerodynamic performance of our choice in terms of forces and pressure distribution for given angles of attack and Reynolds numbers.
 - We want to train an autoencoder on airfoil geometries to capture the distribution of shapes in a latent space.
