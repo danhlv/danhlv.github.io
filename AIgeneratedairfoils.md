@@ -30,8 +30,8 @@ Instead of raw $(x,y)$ coordinates, each airfoil is represented using **CST (Cla
 <figure style="text-align: center;">
   <img src="https://danhlv.github.io/static/img/autoencoder_template.png"
        alt="Fig.1 - The autoencoder used"
-       style="width: 80%; display: block; margin: 0 auto;">
-  <figcaption style="font-size: 14px; margin-top: 8px;">Fig.1 - The autoencoder used</figcaption>
+       style="width: 100%; display: block; margin: 0 auto;">
+  <figcaption style="font-size: 14px; margin-top: 8px;">Fig.1 - Schematic of the autoencoder used</figcaption>
 </figure>
 
 **Total input dimension:**
