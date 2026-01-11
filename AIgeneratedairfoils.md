@@ -16,7 +16,7 @@ For this project, we use the **AirfRANS** dataset, available here:
 The dataset is extracted from CFD simulations in two steps:
 
 - **Step 1:** Extract the NACA airfoil contours (pairs of points $(x, y)$) together with the corresponding pressure distribution.  
-- **Step 2:** Extract the aerodynamic performance quantities — lift $(C_L)$, drag $(C_D)$, moment coefficients $(C_M)$, forces, angle of attack $(AoA)$, and Reynolds number$(Re)$.
+- **Step 2:** Extract the aerodynamic performance quantities — lift $(C_L)$, drag $(C_D)$, moment coefficients $(C_M)$, forces $(F_{\text{tot}X},\ F_{\text{tot}Y})$, angle of attack $(AoA)$, and Reynolds number$(Re)$.
 
 ---
 
